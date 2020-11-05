@@ -3,9 +3,9 @@ def pastumti_zodi (a, k):
     s = ""
     while i<len(a):
         if a[i].isupper():
-            a[i].lower()
-            t = ord(a[i]) + k
-            if t > ord('z') + 1:
+            x = a[i].lower()
+            t = ord(x) + k
+            if t > ord('z'):
                 t -= 26
             s += chr(t).upper()
         else:
