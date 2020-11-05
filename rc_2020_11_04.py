@@ -1,19 +1,17 @@
 def pastumti_zodi (a, k):
-    i=0
     s = ""
-    while i<len(a):
-        if a[i].isupper():
-            x = a[i].lower()
+    for x in a:
+        if x.isupper():
+            x = x.lower()
             t = ord(x) + k
             if t > ord('z'):
                 t -= 26
             s += chr(t).upper()
         else:
-            t = ord(a[i]) + k
+            t = ord(x) + k
             if t > ord('z'):
                 t -= 26
             s += chr(t)
-        i+=1
     return s
 
 import string
